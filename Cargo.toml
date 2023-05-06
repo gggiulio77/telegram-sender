@@ -1,0 +1,18 @@
+[package]
+name = "telegram-sender"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.3.1"
+serde_json = "1"
+log = "0.4.0"
+env_logger = "0.10.0"
+dotenv = "0.15.0"
+teloxide = "0.12.2"
+surrealdb = "1.0.0-beta.9"
+serde = { version = "1.0.160", features = ["derive"] }
+anyhow = "1.0.71"
+thiserror = "1.0.40"
