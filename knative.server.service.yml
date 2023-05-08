@@ -15,7 +15,7 @@ spec:
   template:
     spec:
       containers:
-        - image: localhost:32000/telegram-sender@sha256:e55b5a744a7bca3d770bf95d3f67cb85a47525038876156cfedab4a7a081c167
+        - image: localhost:32000/telegram-sender@sha256:659fa628a935edea92bfb3c3c859d1aa464c892c7df7dc56a1b394c5cb39f57e
           env:
             - name: TELOXIDE_TOKEN
               valueFrom:
@@ -33,7 +33,7 @@ spec:
                   name: surreal-db-access
                   key: DB_PASSWORD
             - name: DB_URL
-              value: 10.0.1.1:8080
+              value: surrealdb.default.svc.cluster.local:8000
             - name: TELOXIDE_URL
               value: https://telegram-sender.default.sentateenesta.duckdns.org
             - name: ENV
