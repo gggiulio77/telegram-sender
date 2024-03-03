@@ -27,7 +27,10 @@ pub async fn handle(
     let db = config.db.as_ref().unwrap();
 
     let User { chat_id, .. } = match db.select(("user", email)).await {
-        Ok(user) => user,
+        Ok(result) => match result {
+            Some(user) => user,
+            None => return Err(error::ErrorNotFound(json!({ "error": "user not found"}))),
+        },
         Err(error) => {
             return Err(error::ErrorBadRequest(
                 json!({ "error": error.to_string() }),
