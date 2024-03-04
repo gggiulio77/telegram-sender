@@ -30,16 +30,9 @@ Alternatively, you will need a [Kubernetes](https://kubernetes.io/) cluster with
 
 ## Usage
 
-To run it locally just create a .env file with all necessary data.
-
-To deploy it in knative use `kubectl apply -f knative.server.service.yml`. Some env values are stored in [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) so refactor the file or create secrets.
-
-If you have a local image repository in port 32000 you can use the `build.sh` in `scripts` folder to build the project and refactor `knative.server.service.yml` with the new image digest.
-
-
 For local execution, simply create a `.env` file containing all required information.
 
-For deployment in Knative, utilize `kubectl apply -f knative.server.service.yml`. Certain environment values are stored in [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/), thus you'll need to refactor the file or create secrets accordingly.
+For deployment in [Knative](https://knative.dev/docs/), utilize `kubectl apply -f knative.server.service.yml`. Certain environment values are stored in [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/), thus you'll need to refactor the file or create secrets accordingly.
 
 If you have a local image repository on port `32000`, you can utilize the `build.sh` script in the scripts folder to build the project and update `knative.server.service.yml` with the new image digest.
 
